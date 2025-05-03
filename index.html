@@ -11,7 +11,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <a href="#" class="logo-link"><img src="radhikaaa.jpg" alt="Radhika's Logo" class="logo"></a>
+                <a href="#" class="logo-link"><img src="Screenshot 2025-05-01 214421.jpg" alt="Radhika's Logo" class="logo"></a>
                 <ul id="sidemenu">
                     <li><a href="#header" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -22,17 +22,43 @@
                 </ul>
                 <i class='bx bx-menu' onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
-                <p>Web Developer</p>
-                <h1>Hi, I'm <span>Radhika</span> <br> Tade from India </h1>
-            </div>
+            <section id="home" class="home">
+                <div class="home-content">
+                    <div class="home-info">
+                        <h1>Radhika Tade</h1>
+                        <h2>
+                            I am a
+                            <div class="rotating-text">
+                                <span style="--i:0">web Developer</span>
+                                <span style="--i:1">Programmer</span>
+                                <span style="--i:2">Youtuber<i class='bx bxs-heart'></i></span>
+                                <span style="--i:3">Designer</span>
+                            </div>
+                        </h2>
+                        <p>From Chhatrapati Sambhajinagar India</p>
+                        <div class="btn-sci">
+                            <a href="java unit 1.pdf" download="Radhika_Tade_CV.pdf" class="btnn">Download CV</a>
+                            <div class="sci">
+                                <a href="https://facebook.com/"><i class='bx bxl-facebook-circle' ></i></a>
+                                <a href="https://twitter.com/"><i class='bx bxl-twitter' ></i></a>
+                                <a href="https://www.instagram.com/radhika_tade2805/#"><i class='bx bxl-instagram' ></i></a>
+                                <a href="https://linkedin.com/"><i class='bx bxl-linkedin' ></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home-image">
+                        <img src="bg.jpg" alt="Radhika Tade">
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
+
     <div id="about">
         <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="radhika.jpg" alt="Radhika's Image">
+            <div class="row" >
+                <div class="about-col-1"  >
+                    <img src="bg.jpg" alt="Radhika's Image">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
@@ -43,35 +69,36 @@
                         <p class="tab-links" onclick="opentab('Experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
-                   
+                    
                     <div class="tab-content active-tab" id="skills">
                         <li><h3>html</h3>
-                          <span class="bar"> <span class="html"></span></span>
+                            <span class="bar"> <span class="html"></span></span>
                         </li>
                         <li><h3>css</h3>
-                          <span class="bar"> <span class="css"></span></span>
+                            <span class="bar"> <span class="css"></span></span>
                         </li>
                         <li><h3>javascript</h3>
-                          <span class="bar"> <span class="javascript"></span></span>
+                            <span class="bar"> <span class="javascript"></span></span>
                         </li>
                         
-                      </div>
-                      <div class="tab-content" id="Experience">
+                    </div>
+                    <div class="tab-content" id="Experience">
                         <ul>
-                          <li><span>2023 - Current</span><br>Frontend Development - Proficient in HTML and CSS for building and styling web pages.</li>
-                          <li><span>2023 - 2024</span><br>C/C++ Programming - Developed strong foundational skills in C and C++ for problem-solving and system-level understanding.</li>
-                          <li><span>Ongoing Learning</span><br>Java Programming - Continuously improving skills and knowledge in Java for application development.</li>
+                            <li><span>2023 - Current</span><br>Frontend Development - Proficient in HTML and CSS for building and styling web pages.</li>
+                            <li><span>2023 - 2024</span><br>C/C++ Programming - Developed strong foundational skills in C and C++ for problem-solving and system-level understanding.</li>
+                            <li><span>Ongoing Learning</span><br>Java Programming - Continuously improving skills and knowledge in Java for application development.</li>
                         </ul>
-                      </div>
-                     
-                        <div class="tab-content" id="Education">
-                            <ul>
-                              <li><span>2023 - Current</span> BCS Second Year - Studying at Shivchhatrapati College.</li>
-                              <li><span>2022</span>Higher Secondary Education (Science) - Jai Bhawani Vidya Mandir - 55%.</li>
-                              <li><span>2021</span>SSC (10th Grade) - Brilliant Kids School - 84%.</li>
-                            </ul>
-                          </div>
-                      
+                    </div>
+                    
+                    <div class="tab-content" id="Education">
+                        <ul>
+                            <li><span>2023 - Current</span> BCS Second Year - Studying at Shivchhatrapati College.</li>
+                            <li><span>2022</span>Higher Secondary Education (Science) - Jai Bhawani Vidya Mandir - 55%.</li>
+                            <li><span>2021</span>SSC (10th Grade) - Brilliant Kids School - 84%.</li>
+                        </ul>
+                    </div>
+                
+            </div>
         </div>
     </div>
     <div id="services">
@@ -98,20 +125,18 @@
                     <p>Taking design mockups (like Figma or PSD files) and converting them into clean, semantic HTML and well-organized CSS.</p>
                     <a href="https://www.w3schools.com/html/" target="_blank">Learn more</a>
                 </div>
-    
-                
             </div>
         </div>
     </div>
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">My Work</h1> 
+            <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
                     <img src="p2 .jpg.jpg" >
                     <div class="layer">
                         <h3>Portfolio</h3>
-                        <p>A social media app concept focused on community building and user interaction.</p> 
+                        <p>A social media app concept focused on community building and user interaction.</p>
                         <a href="#"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
@@ -119,14 +144,11 @@
                     <img src="p1 (1).jpg" alt="">
                     <div class="layer">
                     <h3>E-learning App</h3>
-                        <p>An intuitive music streaming app designed for seamless discovery and listening.</p> 
+                        <p>An intuitive music streaming app designed for seamless discovery and listening.</p>
                         <a href="#"><i class='bx bx-link-external'></i></a>
                     </div>
                 </div>
-               
-                </div>
-            </div> 
-            
+            </div>
         </div>
     </div>
     <div id="contact">
@@ -134,15 +156,10 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class='bx bxs-send' ></i>radhikasanjaytade@gmail.com</p>
-                    <p><i class='bx bxs-phone' ></i>8087060261</p>
-                    <div class="social-icons">
-                        <a href="https://facebook.com/"><i class='bx bxl-facebook-circle' ></i></a>
-                        <a href="https://twitter.com/"><i class='bx bxl-twitter' ></i></a>
-                        <a href="https://www.instagram.com/radhika_tade2805/#"><i class='bx bxl-instagram' ></i></a>
-                        <a href="https://linkedin.com/"><i class='bx bxl-linkedin' ></i></a>
-                    </div>
-                    <a href="environment.pdf" download="Radhika_Tade_CV.pdf" class="btn">Download CV</a>
+                    <p><a href="mailto: radhikasanjaytade@gmail.com"><i class='bx bxs-send' ></i>radhikasanjaytade@gmail.com</a></p>
+                    
+                    <p><a href="tel:8087060261"><i class='bx bxs-phone' ></i>8087060261</a></p>
+                    
                     
                 </div>
                 <div class="contact-right">
@@ -156,7 +173,7 @@
                     <span id="msg"></span>
                     <div id="form-message" style="margin-top: 10px; display: none;"></div>
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="copyright">
             <p>© 2025 radhika <i class='bx bxs-heart'></i>All rights reserved</p>
