@@ -21,6 +21,7 @@
                     <i class='bx bx-window-close' onclick="closemenu()" ></i>
                 </ul>
                 <i class='bx bx-menu' onclick="openmenu()"></i>
+               
             </nav>
             <section id="home" class="home">
                 <div class="home-content">
@@ -53,34 +54,83 @@
             </section>
         </div>
     </div>
-
     <div id="about">
         <div class="container">
-            <div class="row" >
-                <div class="about-col-1"  >
-                    <img src="bg.jpg" alt="Radhika's Image">
+            <h1 class="sub-title">About Me</h1>
+            <div class="about-content">
+                <div class="about-image">
+                   
                 </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p>As a second-year BCS student, I'm actively exploring and passionate about the creative and technical aspects of frontend development. I'm confident in my ability to structure content and style web pages effectively using HTML and CSS. My programming background in C and C++ has instilled in me a strong foundation in computational thinking and problem-solving. I am continuously seeking opportunities to learn and grow in the frontend domain, aiming to contribute to innovative and user-centric web solutions.</p>
-                    
+                <div class="about-info">
+                    <p class="intro">Driven by a passion for creating seamless user experiences, I'm Radhika Tade, a second-year BCS student specializing in frontend development. I'm dedicated to transforming innovative concepts into functional and visually engaging websites.</p>
+    
+                    <div class="skills-highlight">
+                        <h3>Key Skills:</h3>
+                        <ul>
+                            <li><i class='bx bxl-html5'></i> HTML: Proficient in structuring web content.</li>
+                            <li><i class='bx bxl-css3'></i> CSS: Expertise in styling and ensuring responsive design.</li>
+                            <li><i class='bx bxl-javascript'></i> JavaScript: Continuously expanding interactive capabilities.</li>
+                            <li><i class='bx bxl-react'></i> React: Building dynamic user interfaces.</li>
+                            <li><i class='bx bxl-python'></i> Python: Foundational understanding for backend integration.</li>
+                            <li><i class="bx bx-code"></i> C/C++: Strong problem-solving and logical foundation.</li>
+                        </ul>
+                    </div>
+    
+                    <p class="aspiration">Eager to contribute my growing skillset to exciting projects, I thrive in collaborative environments. Explore my portfolio to witness my journey in bringing web development to life.</p>
+    
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">More Skills</p>
                         <p class="tab-links" onclick="opentab('Experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('Education')">Education</p>
                     </div>
-                    
                     <div class="tab-content active-tab" id="skills">
-                        <li><h3>html</h3>
-                            <span class="bar"> <span class="html"></span></span>
-                        </li>
-                        <li><h3>css</h3>
-                            <span class="bar"> <span class="css"></span></span>
-                        </li>
-                        <li><h3>javascript</h3>
-                            <span class="bar"> <span class="javascript"></span></span>
-                        </li>
-                        
+                        <div class="my-skills-container">
+                            <div class="technical-skills">
+                                
+                                <div class="skill">
+                                    <span class="skill-name"><i class='bx bxl-html5'></i> HTML</span>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" data-percent="90">
+                                            <span class="progress-value">90%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name"><i class='bx bxl-css3'></i> CSS</span>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" data-percent="80">
+                                            <span class="progress-value">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name"><i class='bx bxl-javascript'></i> JavaScript</span>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" data-percent="75">
+                                            <span class="progress-value">75%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name"><i class='bx bxl-python'></i> Python</span>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" data-percent="50">
+                                            <span class="progress-value">50%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name"><i class='bx bxl-react'></i> React</span>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" data-percent="70">
+                                            <span class="progress-value">70%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                    
+                                </div>                              
+                        </div>
                     </div>
                     <div class="tab-content" id="Experience">
                         <ul>
@@ -89,7 +139,7 @@
                             <li><span>Ongoing Learning</span><br>Java Programming - Continuously improving skills and knowledge in Java for application development.</li>
                         </ul>
                     </div>
-                    
+    
                     <div class="tab-content" id="Education">
                         <ul>
                             <li><span>2023 - Current</span> BCS Second Year - Studying at Shivchhatrapati College.</li>
@@ -97,7 +147,8 @@
                             <li><span>2021</span>SSC (10th Grade) - Brilliant Kids School - 84%.</li>
                         </ul>
                     </div>
-                
+    
+                </div>
             </div>
         </div>
     </div>
@@ -111,14 +162,14 @@
                     <p>Creating simple, informative websites that don't require dynamic content updates. Perfect for portfolios, landing pages, and basic business websites.</p>
                     <a href="https://en.wikipedia.org/wiki/Static_web_page" target="_blank">Learn more</a>
                 </div>
-    
+
                 <div class="service-item">
                     <i class='bx bx-devices'></i>
                     <h2>Responsive Web Design</h2>
                     <p>Ensuring websites look and function flawlessly across all devices (desktops, tablets, and smartphones).</p>
                     <a href="https://developer.mozilla.org/en-US/docs/Web/fundamentals/design/responsive" target="_blank">Learn more</a>
                 </div>
-    
+
                 <div class="service-item">
                     <i class='bx bxl-figma'></i>
                     <h2>HTML/CSS Markup and Styling</h2>
@@ -133,7 +184,7 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="p2 .jpg.jpg" >
+                    <img src="p2 .jpg.jpg" alt="Portfolio Project">
                     <div class="layer">
                         <h3>Portfolio</h3>
                         <p>A social media app concept focused on community building and user interaction.</p>
@@ -141,9 +192,9 @@
                     </div>
                 </div>
                 <div class="work">
-                    <img src="p1 (1).jpg" alt="">
+                    <img src="p1 (1).jpg" alt="E-learning App Project">
                     <div class="layer">
-                    <h3>E-learning App</h3>
+                        <h3>E-learning App</h3>
                         <p>An intuitive music streaming app designed for seamless discovery and listening.</p>
                         <a href="#"><i class='bx bx-link-external'></i></a>
                     </div>
@@ -157,10 +208,10 @@
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><a href="mailto: radhikasanjaytade@gmail.com"><i class='bx bxs-send' ></i>radhikasanjaytade@gmail.com</a></p>
-                    
+
                     <p><a href="tel:8087060261"><i class='bx bxs-phone' ></i>8087060261</a></p>
-                    
-                    
+
+
                 </div>
                 <div class="contact-right">
                     <form action="https://api.web3forms.com/submit" method="POST" name="contactForm">
@@ -206,6 +257,20 @@
             sidemenu.style.right="-200px";
         }
     </script>
-    
+<script>
+    const progressBars = document.querySelectorAll('.progress-bar');
+const circularProgresses = document.querySelectorAll('.circular-progress');
+
+progressBars.forEach(bar => {
+  const percent = bar.dataset.percent;
+  bar.style.width = percent + '%';
+});
+
+circularProgresses.forEach(progress => {
+  const percent = progress.dataset.percent;
+  progress.style.setProperty('--percent', percent + '%');
+});
+
+</script>
 </body>
 </html>

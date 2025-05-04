@@ -23,10 +23,16 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 40px; /* Added padding at the bottom */
+  margin-bottom: 0; /* Removed margin at the bottom */
 }
 
 .container {
   padding: 10px 10%;
+}
+#icon{
+  width: 30px;
+  cursor: pointer;
 }
 
 nav {
@@ -39,11 +45,16 @@ nav {
 .logo {
   width: 140px;
 }
+nav ul{
+  flex: 1;
+  text-align: right;
+}
 
 nav ul li {
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
+
 }
 
 nav ul li a {
@@ -69,14 +80,15 @@ nav ul li a.active::after {
   width: 100%;
 }
 
+
 .home {
-  padding: 150px 100px;
+  padding: 160px 100px 40px; /* Reduced bottom padding */
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 600px;
+  min-height: auto; /* Adjusted min-height */
 }
 
 .home-content {
@@ -142,23 +154,23 @@ nav ul li a.active::after {
 
 @keyframes cycleText {
   0% {
-    opacity: 0;
+      opacity: 0;
   }
 
   5% {
-    opacity: 1;
+      opacity: 1;
   }
 
   20% {
-    opacity: 1;
+      opacity: 1;
   }
 
   25% {
-    opacity: 0;
+      opacity: 0;
   }
 
   100% {
-    opacity: 0;
+      opacity: 0;
   }
 }
 
@@ -178,10 +190,7 @@ nav ul li a.active::after {
   color: #fff;
   border: 2px solid #ff004f;
   border-radius: 40px;
-  box-shadow: 0 0 10px #ff004f;
-  font-size: 16px;
-  font-weight: 600;
-  transition: background-color 0.5s, color 0.5s;
+  box-shadow: 0 0 10px #ff004f
 }
 
 .btnn:hover {
@@ -217,55 +226,186 @@ nav ul li a.active::after {
 
 /*-----------about----------------*/
 #about {
-  padding: 80px 0;
+  padding: 60px 0;
   color: #ababab;
+  margin-top: 0;
 }
 
-.row {
+.about-content {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column; /* Stack the image and info vertically */
+  align-items: flex-start; /* Align content to the left */
+  gap: 40px;
 }
 
-.about-col-1 {
-  flex-basis: 35%;
+.about-image {
+  flex-basis: auto; /* Adjust based on content height */
+  width: 35%; /* Maintain the image width */
+  margin-bottom: 30px; /* Add space below the image */
 }
 
-.about-col-1 img {
+.about-image img {
   width: 100%;
   border-radius: 15px;
   display: block;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.about-col-2 {
-  flex-basis: 60%;
+.about-info {
+  flex-basis: auto; /* Take up remaining vertical space */
+  width: 100%; /* Make the info span the full width */
 }
 
-.sub-title {
-  font-size: 60px;
-  font-weight: 600;
-  color: #fff;
+.about-info h1.sub-title {
+  margin-bottom: 30px;
+  text-align: left; /* Align the title to the left */
 }
 
-.about-col-2 h1 {
-  font-size: 2.5em;
-  color: #f0f0f0;
+.about-info .intro {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #ddd;
+  text-align: left; /* Align text to the left */
+}
+
+.about-info .skills-highlight {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: left; /* Align text to the left */
+}
+
+.about-info .skills-highlight h3 {
+  color: #ff004f;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.about-info .skills-highlight ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.about-info .skills-highlight ul li {
+  margin-bottom: 8px;
+  font-size: 1em;
+  color: #ddd;
+}
+
+.about-info .skills-highlight ul li i {
+  color: #ff4d79;
+  margin-right: 10px;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+.about-info .aspiration {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #ddd;
+  margin-bottom: 30px;
+  text-align: left; /* Align text to the left */
 }
 
 .tab-titles {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 30px 0 40px;
 }
 
 .tab-links {
   margin-right: 50px;
-  font-size: 18px;
+  font-size: 1.1em;
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  color: #ccc;
+  transition: color 0.3s ease;
 }
 
+.tab-links:hover {
+  color: #fff;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link {
+  color: #fff;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-content {
+  display: none;
+  margin-top: 20px;
+}
+
+.tab-content ul {
+  padding-left: 20px;
+}
+
+.tab-content ul li {
+  list-style: disc;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  font-size: 1em;
+  color: #ddd;
+}
+
+.tab-content ul li span {
+  font-weight: bold;
+  color: #ff4d79;
+  margin-right: 10px;
+}
+
+.tab-content.active-tab {
+  display: block;
+}
+#Experience ul {
+  margin-top: 5px; /* Adjust this value to reduce the space */
+}
+/* Responsive adjustments for about section */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .about-image {
+      width: 80%;
+      margin-bottom: 30px;
+  }
+
+  .about-info {
+      width: 90%;
+      text-align: left; /* Align text to the left on smaller screens too, if desired */
+  }
+
+  .about-info h1.sub-title {
+      text-align: center; /* Center the title on smaller screens */
+  }
+
+  .tab-titles {
+      justify-content: center;
+  }
+
+  .tab-links {
+      margin-right: 30px;
+  }
+}
 .tab-links::after {
   content: '';
   width: 0;
@@ -311,63 +451,95 @@ nav ul li a.active::after {
 }
 
 /*----------- Skills Section Specific Styles -----------*/
-#skills {
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-  color: #fff;
-  padding: 20px;
-  background: #1e1e1e;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/*----------- About Section Skills Styling -----------*/
+/* My Skills Section Styling */
+.my-skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
 }
 
-#skills li {
-  margin-bottom: 15px;
-  padding: 8px 0;
+.technical-skills,
+.professional-skills {
+    flex: 1;
 }
 
-#skills li h3 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+.technical-skills h3,
+.professional-skills h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
 }
 
-.bar {
-  background: #353b48;
-  display: block;
-  height: 20px;
-  border-radius: 10px;
+/* Technical Skills Styling */
+.skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    color: #ddd;
+    width: 120px; /* Adjust width as needed */
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-name i {
+    font-size: 1.2em;
+    margin-right: 8px;
+    color: #ff4d79; /* Accent color */
+}
+
+.progress-bar-container {
+  background-color: #222;
+  height: 8px;
+  border-radius: 4px;
+  width: 30%; /* Reduced width - adjust this percentage as needed */
   overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
-.bar span {
-  height: 100%;
-  float: left;
-  background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
-  border-radius: 10px;
-  display: block;
+.progress-bar {
+    background-color: #ff4d79; /* Progress bar color */
+    height: 100%;
+    border-radius: 4px;
+    width: 0; /* Initial width */
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 0.9em;
 }
 
-.html {
-  width: 90%;
-  animation: html 3s ease-in-out forwards;
+.progress-value {
+    color: #fff;
+    font-weight: bold;
 }
 
-.css {
-  width: 70%;
-  animation: css 3s ease-in-out forwards;
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .professional-skills-row {
+      flex-wrap: wrap; /* Allow circles to wrap to the next line on smaller screens */
+      justify-content: space-around; /* Distribute circles evenly */
+      
+  }
+
+
+ 
 }
 
-.php {
-  width: 60%;
-  animation: php 3s ease-in-out forwards;
-}
 
-.javascript {
-  width: 78%;
-  animation: javascript 3s ease-in-out forwards;
-}
+
 
 /*----------------Services------------*/
 #services {
@@ -432,57 +604,7 @@ nav ul li a.active::after {
   transform: translateY(-5px);
 }
 
-@media only screen and (max-width: 768px) {
-  .services-list {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
 
-  .service-item {
-    padding: 20px;
-  }
-
-  .service-item i {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-
-  .service-item h2 {
-    font-size: 1.5em;
-    margin-bottom: 8px;
-  }
-
-  .service-item p {
-    font-size: 0.8em;
-    margin-bottom: 10px;
-  }
-
-  .service-item a {
-    font-size: 0.75em;
-    padding: 8px 15px;
-  }
-}
-
-.detailed-service {
-  padding: 50px 10%;
-  background: #1a1a1a;
-  color: #fff;
-  display: none;
-}
-
-.detailed-service h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.detailed-service p {
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.detailed-service a {
-  color: #ff4d79;
-  text-decoration: none;
-}
 
 /*------------portfolio--------*/
 #portfolio {
@@ -592,9 +714,9 @@ nav ul li a.active::after {
 .contact-right {
   flex-basis: 60%;
 }
-
 .contact-left p {
   margin-top: 30px;
+  margin-bottom: 15px; /* Added some bottom margin */
 }
 
 .contact-left p a {
@@ -684,14 +806,13 @@ form btn2 {
   margin-top: 20px;
   cursor: pointer;
 }
-
 .copyright {
-  width: 100;
+  width: 100%;
   text-align: center;
   padding: 25px 0;
   background: #262626;
   font-weight: 300;
-  margin-top: 20px;
+  margin-top: 5px; /* Reduced the top margin */
 }
 
 .copyright i {
@@ -782,25 +903,25 @@ nav .bx {
 
   .home-info h2 {
       font-size: 28px;
-      display: flex; /* Keep it as flex */
-      align-items: flex-start; /* Align items to the start */
-      gap: 5px; /* Reduce the gap */
-      overflow: hidden;
-      white-space: nowrap;
-      height: 30px; /* Adjust the height */
+      display: block; /* Changed to block to put on a new line */
+      text-align: center; /* Center the "I am a" text */
       margin-top: -5px; /* Adjust top margin */
   }
 
   .rotating-text {
       position: relative;
-      height: 30px; /* Match the h2 height */
-      width: auto;
+      height: 30px; /* Match the desired height */
+      width: 100%; /* Make it full width to center the animation */
+      overflow: hidden;
+      display: flex; /* Use flex to center the rotating text */
+      justify-content: center; /* Center horizontally */
   }
 
   .rotating-text span {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 50%; /* Start from the horizontal center */
+      transform: translateX(-50%); /* Adjust to truly center */
       color: #fff;
       -webkit-text-stroke: 1px #ff004f; /* Reduce the stroke width */
       opacity: 0;
@@ -812,23 +933,23 @@ nav .bx {
   @keyframes cycleTextMobile {
       0% {
           opacity: 0;
-          transform: translateX(100%); /* Start from right */
+          transform: translateX(calc(-50% + 100%)); /* Start from right center */
       }
       5% {
           opacity: 1;
-          transform: translateX(0%);
+          transform: translateX(-50%);
       }
       25% {
           opacity: 1;
-          transform: translateX(0%);
+          transform: translateX(-50%);
       }
       30% {
           opacity: 0;
-          transform: translateX(-100%); /* Move to left */
+          transform: translateX(calc(-50% - 100%)); /* Move to left center */
       }
       100% {
           opacity: 0;
-          transform: translateX(-100%);
+          transform: translateX(calc(-50% - 100%));
       }
   }
 
@@ -924,4 +1045,27 @@ nav .bx {
   width: 100%;
   margin: 20px auto;
   padding: 15px;
+}@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .about-image {
+      flex-basis: 80%; /* Give more space for the image on smaller screens */
+      margin-bottom: 30px;
+  }
+
+  .about-info {
+      flex-basis: 90%;
+  }
+
+  .tab-titles {
+      justify-content: center; /* Center the tabs on smaller screens */
+  }
+
+  .tab-links {
+      margin-right: 30px;
+  }
 }
