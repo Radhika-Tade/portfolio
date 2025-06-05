@@ -227,7 +227,6 @@ nav ul li a.active::after {
 
 /*-----------about----------------*/
 #about {
-  
   padding: 60px 0;
   color: #ababab;
   margin-top: 0;
@@ -317,7 +316,12 @@ nav ul li a.active::after {
 }
 
 .tab-section {
-  /* Styles for the entire tab section */
+  padding: 40px 20px; /* Add some padding around the entire section */
+  background: #222; /* Dark background to match the technical highlights */
+  color: #f0f0f0; /* Light text for contrast */
+  border-radius: 8px; /* Optional: Rounded corners */
+  margin-bottom: 30px; /* Spacing below the tab section */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Subtle shadow */
 }
 
 .tab-titles {
@@ -434,7 +438,7 @@ nav ul li a.active::after {
 }
 
 .progress-bar-container {
-  background-color: #222;
+  background-color: black;
   height: 8px;
   border-radius: 4px;
   width: 30%; /* Reduced width - adjust this percentage as needed */
